@@ -36,7 +36,7 @@ export default function Login() {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const response = await axios.post(`https://password-manager-ypgw.onrender.com/login`, formData);
+      const response = await axios.post(`https://password-manager-ypgw.onrender.com/userData/login`, formData);
       console.log(response);
       localStorage.setItem('token', response.data.token);
       context.setLoginUser(response.data.data._id)
