@@ -3,7 +3,7 @@ import { FaArrowRight } from 'react-icons/fa6'
 import { Link, useNavigate } from 'react-router-dom'
 import axios from 'axios';
 
-const api = `${import.meta.env.VITE_API_URL}/userData`
+const api = `https://password-manager-ypgw.onrender.com/userData`
 
 export default function Signup() {
   const [formData, setFormData] = useState({});

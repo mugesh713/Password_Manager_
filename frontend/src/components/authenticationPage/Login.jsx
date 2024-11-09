@@ -5,7 +5,7 @@ import axios from 'axios';
 import { IoSend } from "react-icons/io5";
 import { Box, Modal, Button } from '@mui/material';
 
-const api = `${import.meta.env.VITE_API_URL}/userData`
+const api = `https://password-manager-ypgw.onrender.com/userData`
 const style = {
   position: 'absolute',
   top: '50%',
@@ -52,7 +52,7 @@ export default function Login() {
   const handleForgotPassword = async (e) => {
     e.preventDefault();
     try {
-      const response = await axios.put(`${api}/updatePassword/${formData.loginEmail}`, formData);
+      const response = await axios.put(`https://password-manager-ypgw.onrender.com/updatePassword/${formData.loginEmail}`, formData);
       // console.log(response);
       handleClose();
     } catch (error) {

@@ -1,7 +1,7 @@
 import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
 import axios from "axios";
 
-const api = `${import.meta.env.VITE_API_URL}/userData`;
+const api = `https://password-manager-ypgw.onrender.com/userData`;
 
 export const STATUS = Object.freeze({
   IDLE: "idle",
