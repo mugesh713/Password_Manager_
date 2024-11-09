@@ -56,7 +56,7 @@ const DetailComp = () => {
     const handleSubmit = async (e) => {
         e.preventDefault();
         try {
-            const response = await axios.put(`${api}/updateUserData/${detailid}`, detailData);
+            const response = await axios.put(`https://password-manager-ypgw.onrender.com/updateUserData/${detailid}`, detailData);
             // console.log("response", response);
             dispatch(fetchData(context.loginUser))
             toggleEdit()

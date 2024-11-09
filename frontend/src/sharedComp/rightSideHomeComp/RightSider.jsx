@@ -44,7 +44,7 @@ const RightSider = () => {
         if (!user) return;
 
         try {
-            const response = await axios.get(`${api}/getAllUserData/${context.loginUser}`);
+            const response = await axios.get(`https://password-manager-ypgw.onrender.comgetAllUserData/${context.loginUser}`);
             const userData = response.data.map((item, i) => {
                 return { ...item, id: i + 1 }
             });
@@ -69,7 +69,7 @@ const RightSider = () => {
         if (!user) return;
 
         try {
-            const response = await axios.post(`${api}/createUserData`, {
+            const response = await axios.post(`https://password-manager-ypgw.onrender.com/createUserData`, {
                 ...formData,
                 loginEmail: user.loginEmail
             });
@@ -84,7 +84,7 @@ const RightSider = () => {
         if (!user) return;
 
         try {
-            await axios.delete(`${api}/deleteUserData/${id}`);
+            await axios.delete(`https://password-manager-ypgw.onrender.com/deleteUserData/${id}`);
             fetchData();
         } catch (error) {
             console.error('Error:', error);

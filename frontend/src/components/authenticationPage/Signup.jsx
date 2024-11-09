@@ -17,7 +17,7 @@ export default function Signup() {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const response = await axios.post(`${api}/signup`, formData);
+      const response = await axios.post(`https://password-manager-ypgw.onrender.com/signup`, formData);
       // console.log(response.data);
       navigate('/login')
     } catch (error) {
