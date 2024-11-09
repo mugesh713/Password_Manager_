@@ -6,7 +6,7 @@ import { fetchData, STATUS } from '../../../redux/slice/passwordSlice';
 import { useDispatch, useSelector } from 'react-redux';
 import { jwtDecode } from 'jwt-decode';
 
-const api = `${import.meta.env.VITE_API_URL}/userData`;
+const api = `https://password-manager-ypgw.onrender.com/userData`;
 
 const DetailComp = () => {
     const context = useOutletContext();

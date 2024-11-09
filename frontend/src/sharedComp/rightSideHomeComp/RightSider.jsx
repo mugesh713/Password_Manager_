@@ -5,7 +5,7 @@ import { IoAdd, IoRemoveCircleSharp, IoSend } from "react-icons/io5";
 import { Box, Fab, Modal, Typography, Button } from '@mui/material';
 import { jwtDecode } from 'jwt-decode';
 
-const api = `${import.meta.env.VITE_API_URL}/userData`;
+const api = `https://password-manager-ypgw.onrender.com/userData`;
 
 const style = {
     position: 'absolute',
@@ -44,7 +44,7 @@ const RightSider = () => {
         if (!user) return;
 
         try {
-            const response = await axios.get(`https://password-manager-ypgw.onrender.comgetAllUserData/${context.loginUser}`);
+            const response = await axios.get(`https://password-manager-ypgw.onrender.com/userData/getAllUserData/${context.loginUser}`);
             const userData = response.data.map((item, i) => {
                 return { ...item, id: i + 1 }
             });
@@ -69,7 +69,7 @@ const RightSider = () => {
         if (!user) return;
 
         try {
-            const response = await axios.post(`https://password-manager-ypgw.onrender.com/createUserData`, {
+            const response = await axios.post(`https://password-manager-ypgw.onrender.com/userData/createUserData`, {
                 ...formData,
                 loginEmail: user.loginEmail
             });
@@ -84,7 +84,7 @@ const RightSider = () => {
         if (!user) return;
 
         try {
-            await axios.delete(`https://password-manager-ypgw.onrender.com/deleteUserData/${id}`);
+            await axios.delete(`https://password-manager-ypgw.onrender.com/userData/deleteUserData/${id}`);
             fetchData();
         } catch (error) {
             console.error('Error:', error);
