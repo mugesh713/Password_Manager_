@@ -16,7 +16,7 @@ const initialState =  {
 };
 
 export const fetchData = createAsyncThunk('password/fetchData', async (id) => {
-        const response = await axios.get(`https://password-manager-ypgw.onrender.com/getAllUserData/${id}`);
+        const response = await axios.get(`https://password-manager-ypgw.onrender.com/userData/getAllUserData/${id}`);
         // console.log(response)
         return response.data; 
 });
